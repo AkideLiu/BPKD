@@ -1,5 +1,6 @@
 # BPKD : Boundary Privileged Knowledge Distillation For Semantic Segmentation
-Authors: Liyang (Akide) Liu, Zihan Wang, Minh Hieu Phan, Bowen Zhang, Yifan Liu*.   *Corresponding author
+Authors: Liyang (Akide) Liu, Zihan Wang, Minh Hieu Phan, Bowen Zhang, Yifan Liu*.  
+*Corresponding author
 
 [[Paper](https://arxiv.org/abs/2306.08075)] [[Github](https://github.com/AkideLiu/BPKD)] [[Docker](https://github.com/orgs/UAws/packages/container/pytorch-sshd/73081261?tag=ngc-pytorch-1.13-mmcv-1.6.0-mmseg-0.26.0-ubuntu-20.04)] [Pretrained models] [Visualization]
 
