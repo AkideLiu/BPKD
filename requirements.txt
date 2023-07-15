@@ -1,0 +1,7 @@
+argparse~=1.4.0
+numpy~=1.23.4
+mmsegmentation==0.26.0
+torch==1.11.0
+torchvision==0.12.0
+torchaudio==0.11.0
+git+https://github.com/open-mmlab/mmrazor.git@8b57a07b5e6033dbd0052aeaf0f72668bdaecd00
