@@ -1,7 +1,7 @@
 # BPKD : Boundary Privileged Knowledge Distillation For Semantic Segmentation
 Authors: Liyang Liu, Zihan Wang, Minh Hieu Phan, Bowen Zhang, Yifan Liu*.  
 
-*Corresponding author
+*Corresponding author 
 
 ## What's New
 
@@ -98,6 +98,7 @@ python tools/test.py {config.py} {checkpoint.pth}
 | CIRKD             |  54\.53  |    12\.82     |    35\.07    |   45\.38   |
 | CWD               |  54\.53  |    12\.82     |    37\.02    |   46\.33   |
 | **BPKD(Ours)**    |  54\.53  |    12\.82     |  **38\.51**  | **47\.70** |
+| | | | | |
 | T: HRNetV2P-W48   |  95\.64  |    65\.95     |    42\.02    |   53\.52   |
 | S:HRNetV2P-W18S   |  10\.49  |     3\.97     |    31\.38    |   41\.39   |
 | SKDS              |  10\.49  |     3\.97     |    32\.57    |   43\.22   |
@@ -105,6 +106,7 @@ python tools/test.py {config.py} {checkpoint.pth}
 | CIRKD             |  10\.49  |     3\.97     |    33\.06    |   44\.30   |
 | CWD               |  10\.49  |     3\.97     |    34\.00    |   42\.76   |
 | **BPKD(Ours)**    |  10\.49  |     3\.97     |  **35\.31**  | **46\.11** |
+| | | | | |
 | T:DeeplabV3P-R101 | 255\.67  |    62\.68     |    45\.47    |   56\.41   |
 | S:DeeplabV3P+MV2  |  69\.60  |    15\.35     |    31\.56    |   45\.14   |
 | SKDS              |  69\.60  |    15\.35     |    32\.49    |   46\.47   |
@@ -112,6 +114,7 @@ python tools/test.py {config.py} {checkpoint.pth}
 | CIRKD             |  69\.60  |    15\.35     |    32\.24    |   46\.09   |
 | CWD               |  69\.60  |    15\.35     |    35\.12    |   49\.76   |
 | **BPKD(Ours)**    |  69\.60  |    15\.35     |  **35\.49**  | **53\.84** |
+| | | | | |
 | T:ISANet-R101     | 228\.21  |    56\.80     |    43\.80    |   54\.39   |
 | S: ISANet-R18     |  54\.33  |    12\.46     |    31\.15    |   41\.21   |
 | SKDS              |  54\.33  |    12\.46     |    32\.16    |   41\.80   |
@@ -133,6 +136,7 @@ python tools/test.py {config.py} {checkpoint.pth}
 | CIRKD             |  54\.53  |    12\.82     |      45\.62       |   56\.15   |
 | CWD               |  54\.53  |    12\.82     |      45\.99       |   55\.56   |
 | **BPKD(Ours)**    |  54\.53  |    12\.82     |    **46\.82**     | **56\.29** |
+| | | | | |
 | T: HRNetV2P-W48   |  95\.64  |    65\.95     |      51\.12       |   61\.39   |
 | S:HRNetV2P-W18S   |  10\.49  |     3\.97     |      40\.62       |   51\.43   |
 | SKDS              |  10\.49  |     3\.97     |      41\.54       |   52\.18   |
@@ -140,6 +144,7 @@ python tools/test.py {config.py} {checkpoint.pth}
 | CIRKD             |  10\.49  |     3\.97     |      42\.02       |   52\.88   |
 | CWD               |  10\.49  |     3\.97     |      42\.89       |   53\.37   |
 | **BPKD(Ours)**    |  10\.49  |     3\.97     |    **43\.96**     | **54\.51** |
+| | | | | |
 | T:DeeplabV3P-R101 | 255\.67  |    62\.68     |      53\.20       |   64\.04   |
 | S:DeeplabV3P+MV2  |  69\.60  |    15\.35     |      41\.01       |   52\.92   |
 | SKDS              |  69\.60  |    15\.35     |      42\.07       |   55\.06   |
@@ -147,6 +152,7 @@ python tools/test.py {config.py} {checkpoint.pth}
 | CIRKD             |  69\.60  |    15\.35     |      42\.25       |   55\.12   |
 | CWD               |  69\.60  |    15\.35     |      43\.74       |   56\.37   |
 | **BPKD(Ours)**    |  69\.60  |    15\.35     |    **46\.23**     | **58\.12** |
+| | | | | |
 | T:ISANet-R101     | 228\.21  |    56\.80     |      53\.41       |   64\.04   |
 | S: ISANet-R18     |  54\.33  |    12\.46     |      44\.05       |   54\.67   |
 | SKDS              |  54\.33  |    12\.46     |      45\.69       |   56\.27   |
