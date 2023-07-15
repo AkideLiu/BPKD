@@ -1,7 +1,7 @@
 set -x
 checkpoint_name="bpkd_80k_iasnet_r18_cityscapes.pth"
 checkpoint_url=""
-config_name="configs/baseline/isanet/isanet_r18-d8_512x1024_80k_cityscapes.py"
+config_name="configs/baseline/isanet/isanet_r101-d8_512x512_80k_cityscapes.py"
 
 
 
