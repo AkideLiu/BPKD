@@ -47,7 +47,7 @@ According to MMseg: https://github.com/open-mmlab/mmsegmentation/blob/master/doc
 ## Evaluation
 
 ```bash
-python tools/test.py {config.py} {checkpoint.pth}
+python tools/test.py {config.py} {checkpoint.pth} --eval mIoU
 ```
 
 ## Results and models
