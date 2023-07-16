@@ -3,7 +3,7 @@ Authors: [Liyang Liu](https://www.linkedin.com/in/akideliu/), [Zihan Wang](https
 
 *Corresponding author 
 
-[[Paper](https://arxiv.org/abs/2306.08075)] [[Paper Fast Mirror](https://bpkd.vmv.re/resources/2306.08075v1.pdf)] [[Github](https://github.com/AkideLiu/BPKD)] [[Docker](https://github.com/orgs/UAws/packages/container/pytorch-sshd/73081261?tag=ngc-pytorch-1.13-mmcv-1.6.0-mmseg-0.26.0-ubuntu-20.04)] [[Pretrained models](https://github.com/AkideLiu/BPKD/releases)] [[Visualization](resources/viz.md)]
+[[Paper](https://arxiv.org/abs/2306.08075)] [[Paper Fast Mirror](https://bpkd.vmv.re/resources/2306.08075v1.pdf)] [[Project](https://bpkd.vmv.re/)] [[Github](https://github.com/AkideLiu/BPKD)] [[Docker](https://github.com/orgs/UAws/packages/container/pytorch-sshd/73081261?tag=ngc-pytorch-1.13-mmcv-1.6.0-mmseg-0.26.0-ubuntu-20.04)] [[Pretrained models](https://github.com/AkideLiu/BPKD/releases)] [[Visualization](resources/viz.md)]
 
 ---
 
@@ -92,41 +92,41 @@ python tools/test.py {config.py} {checkpoint.pth}
 
 
 
-### **ADE20K**
+### **ADE20K** 512x512 80K
 
 | Methods            | FLOPs(G) | Parameters(M) | mIoU(%) | mAcc(%) | Config | ckpt |
 | ------------------ | -------- | ------------- | ------- | ------- | ------ | ---------- |
 | T: PSPNet-R101    | 256\.89  |    68\.07     |    44\.39    |   54\.75   |[Config](https://github.com/open-mmlab/mmsegmentation/blob/main/configs/pspnet/pspnet_r101-d8_4xb4-160k_ade20k-512x512.py)|[Model](https://download.openmmlab.com/mmsegmentation/v0.5/pspnet/pspnet_r101-d8_512x512_160k_ade20k/pspnet_r101-d8_512x512_160k_ade20k_20200615_100650-967c316f.pth)|
-| S: PSPnet-R18     |  54\.53  |    12\.82     |    33\.30    |   42\.58   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)||
-| SKDS              |  54\.53  |    12\.82     |    34\.49    |   44\.28   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)||
-| IFVD              |  54\.53  |    12\.82     |    34\.54    |   44\.26   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)||
-| CIRKD             |  54\.53  |    12\.82     |    35\.07    |   45\.38   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)||
-| CWD               |  54\.53  |    12\.82     |    37\.02    |   46\.33   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)||
-| **BPKD(Ours)**    |  54\.53  |    12\.82     |  **38\.51**  | **47\.70** |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)||
+| S: PSPnet-R18     |  54\.53  |    12\.82     |    33\.30    |   42\.58   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/raw_80k_pspnet_r18_ade20k_student.pth)|
+| SKDS              |  54\.53  |    12\.82     |    34\.49    |   44\.28   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/skds_80k_pspnet_r18_ade20k_student.pth)|
+| IFVD              |  54\.53  |    12\.82     |    34\.54    |   44\.26   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/ifvd_80k_pspnet_r18_ade20k_student.pth)|
+| CIRKD             |  54\.53  |    12\.82     |    35\.07    |   45\.38   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/cirkd_80k_pspnet_r18_ade20k_student.pth)|
+| CWD               |  54\.53  |    12\.82     |    37\.02    |   46\.33   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/cwd_80k_pspnet_r18_ade20k_student.pth)|
+| **BPKD(Ours)**    |  54\.53  |    12\.82     |  **38\.51**  | **47\.70** |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/bpkd_80k_pspnet_r18_ade20k_student.pth)|
 | | | | | |||
 | T: HRNetV2P-W48   |  95\.64  |    65\.95     |    42\.02    |   53\.52   |[Config](https://github.com/open-mmlab/mmsegmentation/blob/main/configs/hrnet/fcn_hr48_4xb4-160k_ade20k-512x512.py)|[Model](https://download.openmmlab.com/mmsegmentation/v0.5/hrnet/fcn_hr48_512x512_160k_ade20k/fcn_hr48_512x512_160k_ade20k_20200614_214407-a52fc02c.pth)|
 | S: HRNetV2P-W18S  |  10\.49  |     3\.97     |    31\.38    |   41\.39   |[Config](https://github.com/open-mmlab/mmsegmentation/blob/main/configs/hrnet/fcn_hr18s_4xb4-80k_ade20k-512x512.py)|[Model](https://download.openmmlab.com/mmsegmentation/v0.5/hrnet/fcn_hr18s_512x512_80k_ade20k/fcn_hr18s_512x512_80k_ade20k_20200614_144345-77fc814a.pth)|
-| SKDS              |  10\.49  |     3\.97     |    32\.57    |   43\.22   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)||
-| IFVD              |  10\.49  |     3\.97     |    32\.66    |   43\.23   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)||
-| CIRKD             |  10\.49  |     3\.97     |    33\.06    |   44\.30   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)||
-| CWD               |  10\.49  |     3\.97     |    34\.00    |   42\.76   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)||
-| **BPKD(Ours)**    |  10\.49  |     3\.97     |  **35\.31**  | **46\.11** |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)||
+| SKDS              |  10\.49  |     3\.97     |    32\.57    |   43\.22   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/skds_80k_hrnet_r18_ade20k_student.pth)|
+| IFVD              |  10\.49  |     3\.97     |    32\.66    |   43\.23   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/ifvd_80k_hrnet_r18_ade20k_student.pth)|
+| CIRKD             |  10\.49  |     3\.97     |    33\.06    |   44\.30   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/cirkd_80k_hrnet_r18_ade20k_student.pth)|
+| CWD               |  10\.49  |     3\.97     |    34\.00    |   42\.76   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/cwd_80k_hrnet_r18_ade20k_student.pth)|
+| **BPKD(Ours)**    |  10\.49  |     3\.97     |  **35\.31**  | **46\.11** |[Config](eval/configs/baseline/hrnet/fcn_hr18s_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/bpkd_80k_hrnet_r18_ade20k_student.pth)|
 | | | | | |||
 | T:DeeplabV3P-R101 | 255\.67  |    62\.68     |    45\.47    |   56\.41   |[Config](https://github.com/open-mmlab/mmsegmentation/blob/main/configs/deeplabv3plus/deeplabv3plus_r101-d8_4xb4-160k_ade20k-512x512.py)|[Model](https://download.openmmlab.com/mmsegmentation/v0.5/deeplabv3plus/deeplabv3plus_r101-d8_512x512_160k_ade20k/deeplabv3plus_r101-d8_512x512_160k_ade20k_20200615_123232-38ed86bb.pth)|
-| S:DeeplabV3P+MV2  |  69\.60  |    15\.35     |    31\.56    |   45\.14   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)||
-| SKDS              |  69\.60  |    15\.35     |    32\.49    |   46\.47   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)||
-| IFVD              |  69\.60  |    15\.35     |    32\.11    |   46\.07   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)||
-| CIRKD             |  69\.60  |    15\.35     |    32\.24    |   46\.09   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)||
-| CWD               |  69\.60  |    15\.35     |    35\.12    |   49\.76   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)||
-| **BPKD(Ours)**    |  69\.60  |    15\.35     |  **35\.49**  | **53\.84** |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)||
+| S:DeeplabV3P+MV2  |  69\.60  |    15\.35     |    31\.56    |   45\.14   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/raw_80k_deeplab_v3plus+mv2_ade20k_student.pth)|
+| SKDS              |  69\.60  |    15\.35     |    32\.49    |   46\.47   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/skds_80k_deeplab_v3plus+mv2_ade20k_student.pth)|
+| IFVD              |  69\.60  |    15\.35     |    32\.11    |   46\.07   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/ifvd_80k_deeplab_v3plus+mv2_ade20k_student.pth)|
+| CIRKD             |  69\.60  |    15\.35     |    32\.24    |   46\.09   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/cirkd_80k_deeplab_v3plus+mv2_ade20k_student.pth)|
+| CWD               |  69\.60  |    15\.35     |    35\.12    |   49\.76   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/cwd_80k_deeplab_v3plus+mv2_ade20k_student.pth)|
+| **BPKD(Ours)**    |  69\.60  |    15\.35     |  **35\.49**  | **53\.84** |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/bpkd_80k_deeplab_v3plus+mv2_ade20k_student.pth)|
 | | | | | |||
 | T: ISANet-R101    | 228\.21  |    56\.80     |    43\.80    |   54\.39   |[Config](https://github.com/open-mmlab/mmsegmentation/blob/main/configs/isanet/isanet_r101-d8_4xb4-160k_ade20k-512x512.py)|[Model](https://download.openmmlab.com/mmsegmentation/v0.5/isanet/isanet_r101-d8_512x512_160k_ade20k/isanet_r101-d8_512x512_160k_ade20k_20210903_211431-a7879dcd.pth)|
-| S: ISANet-R18     |  54\.33  |    12\.46     |    31\.15    |   41\.21   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)||
-| SKDS              |  54\.33  |    12\.46     |    32\.16    |   41\.80   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)||
-| IFVD              |  54\.33  |    12\.46     |    32\.78    |   42\.61   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)||
-| CIRKD             |  54\.33  |    12\.46     |    32\.82    |   42\.71   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)||
-| CWD               |  54\.33  |    12\.46     |    37\.56    |   45\.79   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)||
-| **BPKD(Ours)**    |  54\.33  |    12\.46     |  **38\.73**  | **47\.92** |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)||
+| S: ISANet-R18     |  54\.33  |    12\.46     |    31\.15    |   41\.21   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/raw_80k_isanet_r18_ade20k_student.pth)|
+| SKDS              |  54\.33  |    12\.46     |    32\.16    |   41\.80   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/skds_80k_isanet_r18_ade20k_student.pth)|
+| IFVD              |  54\.33  |    12\.46     |    32\.78    |   42\.61   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/ifvd_80k_isanet_r18_ade20k_student.pth)|
+| CIRKD             |  54\.33  |    12\.46     |    32\.82    |   42\.71   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/cirkd_80k_isanet_r18_ade20k_student.pth)|
+| CWD               |  54\.33  |    12\.46     |    37\.56    |   45\.79   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/cwd_80k_isanet_r18_ade20k_student.pth)|
+| **BPKD(Ours)**    |  54\.33  |    12\.46     |  **38\.73**  | **47\.92** |[Config](eval/configs/baseline/isanet/isanet_r18-d8_512x512_80k_ade20k.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.2/bpkd_80k_isanet_r18_ade20k_student.pth)|
 
 
 

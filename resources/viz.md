@@ -1,6 +1,6 @@
 # Visualization
 
-Refer Appendix of the [paper]((https://bpkd.vmv.re/resources/2306.08075v1.pdf)) for better view.
+Refer Appendix of the [paper](https://bpkd.vmv.re/resources/2306.08075v1.pdf) for better view.
 
 ## CAM Viz
 ![cam_viz](cam_img.png)
