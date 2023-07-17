@@ -13,6 +13,9 @@ Authors: [Liyang Liu](https://www.linkedin.com/in/akideliu/), [Zihan Wang](https
 
 ## What's New
 
+- `18 Jul 2023` : Release evaluation code and weights for Pascal Context dataset. 
+  **Training Code Coming Later This Year...**
+
 - `17 Jul 2023` : Release evaluation code and weights for ADE20K dataset.
 
 - `16 Jul 2023` : Release evaluation code and weights for Cityscape dataset.
@@ -51,6 +54,8 @@ python tools/test.py {config.py} {checkpoint.pth} --eval mIoU
 ```
 
 ## Results and models
+
+We conducted all experiments using 4 NVIDIA A100 GPUs on The University of Adelaide [High Performance Computing](https://www.adelaide.edu.au/technology/research/high-performance-computing/phoenix-on-premise-hpc) Cluster (HPC).
 
 ### Cityscapes 512x1024 80K
 
@@ -135,36 +140,36 @@ python tools/test.py {config.py} {checkpoint.pth} --eval mIoU
 | Methods            | FLOPs(G) | Parameters(M) | mIoU(%) | mAcc(%) | Config | ckpt |
 | ------------------ | -------- | ------------- | ------- | ------- | ------ | ---------- |
 | T: PSPNet-R101    | 256\.89  |    68\.07     |      52\.47       |   63\.15   |[Config](https://github.com/open-mmlab/mmsegmentation/blob/main/configs/pspnet/pspnet_r101-d8_4xb4-80k_pascal-context-59-480x480.py)|[Model](https://download.openmmlab.com/mmsegmentation/v0.5/pspnet/pspnet_r101-d8_480x480_80k_pascal_context_59/pspnet_r101-d8_480x480_80k_pascal_context_59_20210416_114418-fa6caaa2.pth)|
-| S:PSPnet-R18      |  54\.53  |    12\.82     |      43\.79       |   54\.46   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)||
-| SKDS              |  54\.53  |    12\.82     |      45\.08       |   55\.56   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)||
-| IFVD              |  54\.53  |    12\.82     |      45\.97       |   56\.6    |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)||
-| CIRKD             |  54\.53  |    12\.82     |      45\.62       |   56\.15   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)||
-| CWD               |  54\.53  |    12\.82     |      45\.99       |   55\.56   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)||
-| **BPKD(Ours)**    |  54\.53  |    12\.82     |    **46\.82**     | **56\.29** |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)||
+| S:PSPnet-R18      |  54\.53  |    12\.82     |      43\.79       |   54\.46   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/raw_80k_pspnet_r18_pascal_context_59_student.pth)|
+| SKDS              |  54\.53  |    12\.82     |      45\.08       |   55\.56   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/skds_80k_pspnet_r18_pascal_context_59_student.pth)|
+| IFVD              |  54\.53  |    12\.82     |      45\.97       |   56\.6    |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/ifvd_80k_pspnet_r18_pascal_context_59_student.pth)|
+| CIRKD             |  54\.53  |    12\.82     |      45\.62       |   56\.15   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/cirkd_80k_pspnet_r18_pascal_context_59_student.pth)|
+| CWD               |  54\.53  |    12\.82     |      45\.99       |   55\.56   |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/cwd_80k_pspnet_r18_pascal_context_59_student.pth)|
+| **BPKD(Ours)**    |  54\.53  |    12\.82     |    **46\.82**     | **56\.29** |[Config](eval/configs/baseline/pspnet/pspnet_r18-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/bpkd_80k_pspnet_r18_pascal_context_59_student.pth)|
 | | | | | |||
 | T: HRNetV2P-W48   |  95\.64  |    65\.95     |      51\.12       |   61\.39   |[Config](https://github.com/open-mmlab/mmsegmentation/blob/main/configs/hrnet/fcn_hr48_4xb4-80k_pascal-context-59-480x480.py)|[Model](https://download.openmmlab.com/mmsegmentation/v0.5/hrnet/fcn_hr48_480x480_80k_pascal_context_59/fcn_hr48_480x480_80k_pascal_context_59_20210411_003240-3ae7081e.pth)|
 | S:HRNetV2P-W18S   |  10\.49  |     3\.97     |      40\.62       |   51\.43   |||
-| SKDS              |  10\.49  |     3\.97     |      41\.54       |   52\.18   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)||
-| IFVD              |  10\.49  |     3\.97     |      41\.55       |   52\.24   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)||
-| CIRKD             |  10\.49  |     3\.97     |      42\.02       |   52\.88   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)||
-| CWD               |  10\.49  |     3\.97     |      42\.89       |   53\.37   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)||
-| **BPKD(Ours)**    |  10\.49  |     3\.97     |    **43\.96**     | **54\.51** |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)||
+| SKDS              |  10\.49  |     3\.97     |      41\.54       |   52\.18   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/skds_80k_hrnet_w18s_pascal_context_59_student.pth)|
+| IFVD              |  10\.49  |     3\.97     |      41\.55       |   52\.24   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/ifvd_80k_hrnet_w18s_pascal_context_59_student.pth)|
+| CIRKD             |  10\.49  |     3\.97     |      42\.02       |   52\.88   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/cirkd_80k_hrnet_w18s_pascal_context_59_student.pth)|
+| CWD               |  10\.49  |     3\.97     |      42\.89       |   53\.37   |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/cwd_80k_hrnet_w18s_pascal_context_59_student.pth)|
+| **BPKD(Ours)**    |  10\.49  |     3\.97     |    **43\.96**     | **54\.51** |[Config](eval/configs/baseline/hrnet/fcn_hr18s_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/bpkd_80k_hrnet_w18s_pascal_context_59_student.pth)|
 | | | | | |||
 | T:DeeplabV3P-R101 | 255\.67  |    62\.68     |      53\.20       |   64\.04   |[Config](https://github.com/open-mmlab/mmsegmentation/blob/main/configs/deeplabv3plus/deeplabv3plus_r101-d8_4xb4-80k_pascal-context-59-480x480.py)|[Model](https://download.openmmlab.com/mmsegmentation/v0.5/deeplabv3plus/deeplabv3plus_r101-d8_480x480_80k_pascal_context_59/deeplabv3plus_r101-d8_480x480_80k_pascal_context_59_20210416_111127-7ca0331d.pth)|
-| S:DeeplabV3P+MV2  |  69\.60  |    15\.35     |      41\.01       |   52\.92   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)||
-| SKDS              |  69\.60  |    15\.35     |      42\.07       |   55\.06   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)||
-| IFVD              |  69\.60  |    15\.35     |      41\.73       |   54\.34   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)||
-| CIRKD             |  69\.60  |    15\.35     |      42\.25       |   55\.12   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)||
-| CWD               |  69\.60  |    15\.35     |      43\.74       |   56\.37   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)||
-| **BPKD(Ours)**    |  69\.60  |    15\.35     |    **46\.23**     | **58\.12** |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)||
+| S:DeeplabV3P+MV2  |  69\.60  |    15\.35     |      41\.01       |   52\.92   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/raw_80k_deeplab_v3plus+mv2_pascal_context_59_student.pth)|
+| SKDS              |  69\.60  |    15\.35     |      42\.07       |   55\.06   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/skds_80k_deeplab_v3plus+mv2_pascal_context_59_student.pth)|
+| IFVD              |  69\.60  |    15\.35     |      41\.73       |   54\.34   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/ifvd_80k_deeplab_v3plus+mv2_pascal_context_59_student.pth)|
+| CIRKD             |  69\.60  |    15\.35     |      42\.25       |   55\.12   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/cirkd_80k_deeplab_v3plus+mv2_pascal_context_59_student.pth)|
+| CWD               |  69\.60  |    15\.35     |      43\.74       |   56\.37   |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/cwd_80k_deeplab_v3plus+mv2_pascal_context_59_student.pth)|
+| **BPKD(Ours)**    |  69\.60  |    15\.35     |    **46\.23**     | **58\.12** |[Config](eval/configs/baseline/deeplabv3plus/deeplabv3plus_m-v2-d8_480x480_80k_pascal_context_59.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/bpkd_80k_deeplab_v3plus+mv2_pascal_context_59_student.pth)|
 | | | | | |||
-| T:ISANet-R101     | 228\.21  |    56\.80     |      53\.41       |   64\.04   |[Config](eval/configs/baseline/isanet/isanet_r101-d8_512x512_80k_context.py)||
-| S: ISANet-R18     |  54\.33  |    12\.46     |      44\.05       |   54\.67   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)||
-| SKDS              |  54\.33  |    12\.46     |      45\.69       |   56\.27   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)||
-| IFVD              |  54\.33  |    12\.46     |      46\.75       |   56\.4    |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)||
-| CIRKD             |  54\.33  |    12\.46     |      45\.83       |   56\.11   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)||
-| CWD               |  54\.33  |    12\.46     |      46\.76       |   56\.48   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)||
-| **BPKD(Ours)**    |  54\.33  |    12\.46     |    **47\.25**     | **56\.81** |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)||
+| T:ISANet-R101     | 228\.21  |    56\.80     |      53\.41       |   64\.04   |[Config](eval/configs/baseline/isanet/isanet_r101-d8_512x512_80k_context.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/raw_80k_isanet_r18_pascal_context_59_teacher.pth)|
+| S: ISANet-R18     |  54\.33  |    12\.46     |      44\.05       |   54\.67   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/raw_80k_isanet_r18_pascal_context_59_student.pth)|
+| SKDS              |  54\.33  |    12\.46     |      45\.69       |   56\.27   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/skds_80k_isanet_r18_pascal_context_59_student.pth)|
+| IFVD              |  54\.33  |    12\.46     |      46\.75       |   56\.4    |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/ifvd_80k_isanet_r18_pascal_context_59_student.pth)|
+| CIRKD             |  54\.33  |    12\.46     |      45\.83       |   56\.11   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/cirkd_80k_isanet_r18_pascal_context_59_student.pth)|
+| CWD               |  54\.33  |    12\.46     |      46\.76       |   56\.48   |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/cwd_80k_isanet_r18_pascal_context_59_student.pth)|
+| **BPKD(Ours)**    |  54\.33  |    12\.46     |    **47\.25**     | **56\.81** |[Config](eval/configs/baseline/isanet/isanet_r18-d8_480x480_80k_context.py)|[Model](https://github.com/AkideLiu/BPKD/releases/download/v0.0.3/bpkd_80k_isanet_r18_pascal_context_59_student.pth)|
 
 
 
