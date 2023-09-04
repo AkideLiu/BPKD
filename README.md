@@ -1,9 +1,9 @@
 # BPKD : Boundary Privileged Knowledge Distillation For Semantic Segmentation
-Authors: [Liyang Liu](https://www.linkedin.com/in/akideliu/), [Zihan Wang](https://www.linkedin.com/in/zihan-wang-68675a231/), [Minh Hieu Phan](https://scholar.google.com/citations?user=gSEw8EsAAAAJ&hl=en), [Bowen Zhang](https://github.com/zbwxp), [Yifan Liu](https://irfanicmll.github.io/)*.  
+Authors: [Liyang Liu](https://www.linkedin.com/in/akideliu/), [Zihan Wang](https://www.linkedin.com/in/zihan-wang-68675a231/), [Minh Hieu Phan](https://scholar.google.com/citations?user=gSEw8EsAAAAJ&hl=en), [Bowen Zhang](https://github.com/zbwxp), [Jinchao Ge](https://github.com/jinchaogjc), [Yifan Liu](https://irfanicmll.github.io/)*.  
 
 *Corresponding author 
 
-[[Paper](https://arxiv.org/abs/2306.08075)] [[Paper Fast Mirror](https://bpkd.vmv.re/resources/2306.08075v1.pdf)] [[Project](https://bpkd.vmv.re/)] [[Github](https://github.com/AkideLiu/BPKD)] [[Docker](https://github.com/orgs/UAws/packages/container/pytorch-sshd/73081261?tag=ngc-pytorch-1.13-mmcv-1.6.0-mmseg-0.26.0-ubuntu-20.04)] [[Pretrained models](https://github.com/AkideLiu/BPKD/releases)] [[Visualization](resources/viz.md)]
+[[Paper](https://arxiv.org/abs/2306.08075)] [[Paper Fast Mirror](https://bpkd.vmv.re/resources/2306.08075v2.pdf)] [[Project](https://bpkd.vmv.re/)] [[Github](https://github.com/AkideLiu/BPKD)] [[Docker](https://github.com/orgs/UAws/packages/container/pytorch-sshd/73081261?tag=ngc-pytorch-1.13-mmcv-1.6.0-mmseg-0.26.0-ubuntu-20.04)] [[Pretrained models](https://github.com/AkideLiu/BPKD/releases)] [[Visualization](resources/viz.md)]
 
 ---
 
