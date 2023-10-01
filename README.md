@@ -1,5 +1,5 @@
 # BPKD : Boundary Privileged Knowledge Distillation For Semantic Segmentation
-Authors: [Liyang Liu](https://www.linkedin.com/in/akideliu/), [Zihan Wang](https://www.linkedin.com/in/zihan-wang-68675a231/), [Minh Hieu Phan](https://scholar.google.com/citations?user=gSEw8EsAAAAJ&hl=en), [Bowen Zhang](https://github.com/zbwxp), [Jinchao Ge](https://github.com/jinchaogjc), [Yifan Liu](https://irfanicmll.github.io/)*.  
+Authors: [Liyang Liu](https://www.linkedin.com/in/akideliu/), [Zihan Wang](https://www.linkedin.com/in/zihan-wang-68675a231/), [Minh Hieu Phan](https://scholar.google.com/citations?user=gSEw8EsAAAAJ&hl=en), [Bowen Zhang](https://github.com/zbwxp), [Jinchao Ge](https://github.com/jinchaogjc), [Yifan Liu](https://yifaninmemory.vmv.re/)*.  
 
 *Corresponding author 
 
