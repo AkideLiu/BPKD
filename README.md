@@ -13,8 +13,9 @@ Authors: [Liyang Liu](https://www.linkedin.com/in/akideliu/), [Zihan Wang](https
 
 ## What's New
 
+- `25 Oct 2023` : Our Paper Accept by WACV 2024, we will refactor and release the training code after CVPR DDL, stay tuned.
+
 - `18 Jul 2023` : Release evaluation code and weights for Pascal Context dataset. 
-  **Training Code Coming Later This Year...**
 
 - `17 Jul 2023` : Release evaluation code and weights for ADE20K dataset.
 
@@ -185,7 +186,7 @@ For academic use, this project is licensed under the 2-clause BSD License - see 
 @article{liu2023bpkd,
   title={BPKD: Boundary Privileged Knowledge Distillation For Semantic Segmentation},
   author={Liu, Liyang and Wang, Zihan and Phan, Minh Hieu and Zhang, Bowen and Liu, Yifan},
-  journal={arXiv preprint arXiv:2306.08075},
+  journal={IEEE/CVF Winter Conference on Applications of Computer Vision 2024},
   year={2023}
 }
 ```
